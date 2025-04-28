@@ -1,4 +1,4 @@
-apiVersion: helm.toolkit.fluxcd.io/v2
++apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
   name: stage-devblog
@@ -15,7 +15,5 @@ spec:
   values:
     replicaCount: 1
   upgrade:
-    crds:
-      create: true
-    remediation:
-      retries: 3
+    crds: CRDsPolicy 
+
