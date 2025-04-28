@@ -4,7 +4,7 @@ metadata:
   name: stage-devblog
   namespace: flux-system
 spec:
-  interval: 5m
+  interval: 1m
   path: "./config/clusters/stage-devblog"
   prune: true
   sourceRef:
