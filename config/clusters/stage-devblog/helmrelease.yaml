@@ -15,5 +15,5 @@ spec:
   values:
     replicaCount: 1
   upgrade:
-    crds: CRDsPolicy 
+    crds: CreateReplace
 
