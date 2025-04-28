@@ -5,15 +5,16 @@ metadata:
   namespace: default
 spec:
   interval: 20s
+  targetNamespace: stage
   chart:
     spec:
-      chart: ./        
+      chart: stage-devblog
       sourceRef:
         kind: HelmRepository
         name: devblog-chart-repo
+        namespace: flux-system  
       version: "*" 
   values:
     replicaCount: 1
   upgrade:
     crds: CreateReplace
-
