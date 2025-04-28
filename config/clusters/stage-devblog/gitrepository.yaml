@@ -1,0 +1,12 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: stage-devblog
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://github.com/Mykhailo-Sichkaruk/thesis-deploy
+  ref:
+    branch: main
+    tag: 'v*'
+  path: ./charts/devblog/
