@@ -1,4 +1,5 @@
-apiVersion: helm.toolkit.fluxcd.io/v2
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+piVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: stage-devblog
@@ -7,11 +8,11 @@ spec:
   interval: 20s
   chart:
     spec:
-      chart: devblog
-      version: ">=0.1.7"
+      chart: ./        
       sourceRef:
         kind: HelmRepository
-        name: devblog-charts
+        name: devblog-chart-repo
+      version: "*" 
   values:
     replicaCount: 1
   upgrade:
