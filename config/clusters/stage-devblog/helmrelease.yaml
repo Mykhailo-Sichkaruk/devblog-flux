@@ -9,10 +9,11 @@ spec:
   chart:
     spec:
       chart: stage-devblog
+      releaseName: app
       sourceRef:
         kind: HelmRepository
         name: devblog-chart-repo
-        namespace: flux-system  
+        namespace: default
       version: "*" 
   values:
     replicaCount: 1
