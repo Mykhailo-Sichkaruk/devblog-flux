@@ -1,0 +1,9 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: devblog-charts
+  namespace: flux-system
+spec:
+  interval: 20s
+  url: https://mykhailo-sichkaruk.github.io/thesis-deploy/
+
