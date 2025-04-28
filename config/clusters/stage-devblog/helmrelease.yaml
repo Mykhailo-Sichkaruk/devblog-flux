@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: stage-devblog
-  namespace: default
+  namespace: ddddddddddddddd
 spec:
   interval: 20s
   targetNamespace: stage
