@@ -5,7 +5,6 @@ metadata:
   namespace: default
 spec:
   interval: 20s
-  targetNamespace: stage
   releaseName: app
   chart:
     spec:
@@ -13,7 +12,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: devblog-chart-repo
-        namespace: default
       version: "*" 
   values:
     replicaCount: 1
