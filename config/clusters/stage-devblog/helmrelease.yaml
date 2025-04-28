@@ -2,7 +2,6 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: stage-devblog
-  namespace: default
 spec:
   interval: 20s
   releaseName: app
@@ -12,6 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: devblog-chart-repo
+        namespace: default
       version: "*" 
   values:
     replicaCount: 1
