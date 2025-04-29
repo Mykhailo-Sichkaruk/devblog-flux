@@ -1,12 +1,12 @@
-apiVersion: notification.toolkit.fluxcd.io/v1
+apiVersion: notification.toolkit.fluxcd.io/v1beta2
 kind: Alert
 metadata:
   name: trigger-stage-tests
   namespace: flux-system
 spec:
   providerRef:
-    name: test-run-trigger
+    name: test-run-trigger       # must match your Receiver
   eventSources:
     - kind: HelmRelease
-      name: stage-devblog
+      name: stage-devblog        # watches this release
   eventSeverity: info
