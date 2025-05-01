@@ -14,8 +14,8 @@ spec:
         name: devblog-chart-repo
         namespace: default
       version: "*" 
-  values:
-    replicaCount: 1
+  valuesFrom:
+    - kind: ConfigMap
+      name: lint-report
   upgrade:
     crds: CreateReplace
-
