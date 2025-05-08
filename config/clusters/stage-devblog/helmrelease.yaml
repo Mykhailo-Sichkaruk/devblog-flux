@@ -11,5 +11,5 @@ spec:
       chart: test-devblog
       sourceRef:
         kind: HelmRepository
-        name: test0devblog-chart-repo
+        name: test-devblog-chart-repo
         namespace: default
