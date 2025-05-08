@@ -1,18 +1,15 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: stage-devblog
+  name: test-devblog-release
   namespace: default
 spec:
-  interval: 20s
+  interval: 5m
   releaseName: app
   chart:
     spec:
-      chart: stage-devblog
+      chart: test-devblog
       sourceRef:
         kind: HelmRepository
-        name: devblog-chart-repo
+        name: test0devblog-chart-repo
         namespace: default
-      version: "*" 
-  upgrade:
-    crds: CreateReplace

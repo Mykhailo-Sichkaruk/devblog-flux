@@ -24,6 +24,7 @@
             openssl
             fluxcd
             kustomize
+            kube-linter
           ];
         };
       }
