@@ -4,7 +4,7 @@ metadata:
   name: test-devblog-release
   namespace: default
 spec:
-  interval: 5m
+  interval: 20s
   releaseName: app
   chart:
     spec:

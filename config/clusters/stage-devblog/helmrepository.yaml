@@ -4,5 +4,5 @@ metadata:
   name: test-devblog-chart-repo
   namespace: default
 spec:
-  interval: 5m
+  interval: 20s
   url: https://mykhailo-sichkaruk.github.io/thesis-deploy/
